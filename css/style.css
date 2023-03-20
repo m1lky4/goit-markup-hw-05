@@ -8,6 +8,7 @@
   --top-line-color: #e7e9fc;
   --icon-hover-green: #31d0aa;
   --customers-border: #8e8f99;
+  --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 body {
   font-family: "Roboto", sans-serif;
@@ -26,6 +27,7 @@ body {
   letter-spacing: 0.02em;
   color: var(--main-text-color);
   padding: 24px 0;
+  transition: color var(--transition);
 }
 .list {
   list-style: none;
@@ -46,6 +48,7 @@ body {
   padding: 16px 32px;
   letter-spacing: 0.04em;
   border: none;
+  transition: background-color var(--transition);
 }
 .hero-title {
   width: 496px;
@@ -161,6 +164,7 @@ body {
   justify-content: center;
   align-items: center;
   color: var(--main-p-bottom-color);
+  transition: background-color var(--transition);
 }
 .social-list-icon:hover,
 .social-list-icon:focus {
@@ -181,6 +185,7 @@ body {
   justify-content: center;
   align-items: center;
   color: var(--main-p-bottom-color);
+  transition: background-color var(--transition);
 }
 .social-list-footer-icon:hover,
 .social-list-footer-icon:focus {
@@ -217,6 +222,7 @@ body {
 }
 .customers-list-icon {
   fill: var(--customers-border);
+  transition: fill var(--transition);
 }
 .customers-list-link {
   display: flex;
@@ -224,6 +230,7 @@ body {
   border: 1px solid var(--customers-border);
   border-radius: 4px;
   outline: transparent;
+  transition: border var(--transition);
 }
 .customers-list-link:hover,
 .customers-list-link:focus {
@@ -274,6 +281,7 @@ body {
   color: var(--main-p-color);
   text-decoration: none;
   padding: 24px 0;
+  transition: color var(--transition);
 }
 .contacts {
   margin-left: auto;
@@ -303,14 +311,16 @@ body {
   line-height: 1.5;
   letter-spacing: 0.04em;
   padding: 12px 24px;
+  transition: background-color var(--transition), color var(--transition),
+    box-shadow var(--transition), border var(--transition);
 }
 .button-list .portfolio-btn:hover,
 .portfolio-btn:focus {
-  background: var(--main-hover-color);
+  background-color: var(--main-hover-color);
   color: var(--main-bg-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-  border: none;
+  border: 1px solid transparent;
   outline: transparent;
 }
 .img-list-flex {
@@ -335,6 +345,7 @@ body {
   text-decoration: none;
   color: var(--main-text-color);
   display: block;
+  transition: box-shadow var(--transition);
 }
 
 .portfolio-list {
@@ -433,8 +444,6 @@ ul {
 .navigation {
   display: flex;
   align-items: center;
-  padding-top: 24px;
-  padding-bottom: 24px;
 }
 .navigation li {
   margin-right: 40px;
@@ -448,7 +457,7 @@ ul {
 }
 .current::after {
   position: absolute;
-  bottom: 0;
+  bottom: -2px;
   right: 0;
   content: "";
   width: 100%;
