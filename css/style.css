@@ -492,7 +492,6 @@ ul {
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
-  visibility: hidden;
 }
 .close-button {
   border-radius: 50%;
